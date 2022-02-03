@@ -1,0 +1,21 @@
+,História de Credito,Dívida,Garantia,Renda,Risco
+E1,Ruim,Alta,Nenhuma,$0_a_$15k,Alto
+E2,Desconhecido,Alta,Nenhuma,$15_a_$35k,Alto
+E3,Desconhecido,Baixa,Nenhuma,$15_a_$35k,Moderado
+E4,Desconhecido,Baixa,Nenhuma,$0_a_$15k,Alto
+E5,Desconhecido,Baixa,Nenhuma,Acima_de_$35k,Baixo
+E6,Desconhecido,Baixa,Adequada,Acima_de_$35k,Baixo
+E7,Ruim,Baixa,Nenhuma,$0_a_$15k,Alto
+E8,Ruim,Baixa,Adequada,Acima_de_$35k,Moderado
+E9,Boa,Baixa,Nenhuma,Acima_de_$35k,Baixo
+E10,Boa,Alta,Adequada,Acima_de_$35k,Baixo
+E11,Boa,Alta,Nenhuma,$0_a_$15k,Alto
+E12,Boa,Alta,Nenhuma,$15_a_$35k,Moderado
+E13,Boa,Alta,Nenhuma,Acima_de_$35k,Baixo
+E14,Ruim,Alta,Nenhuma,$15_a_$35k,Alto
+E15,Ruim,Alta,Nenhuma,Acima_de_$35k,Moderado
+E16,Desconhecido,Alta,Nenhuma,Acima_de_$35k,Alta
+E17,Boa,Baixa,Adequada,$0_a_$15k,Baixo
+E18,Boa,Alta,Nenhuma,Acima_de_$35k,Baixo
+E19,Desconhecido,Alta,Adequada,$15_a_$35k,Moderado
+E20,Ruim,Baixa,Adequada,$0_a_$15k,Moderado
