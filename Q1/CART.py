@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 from sklearn.preprocessing import OrdinalEncoder
 
-dataset = pd.read_csv('database.csv')
+dataset = pd.read_csv('Q1/database.csv')
 dataset = dataset.loc[:, dataset.columns != 'Exemplo']
 enc = OrdinalEncoder()
 dataset = enc.fit_transform(dataset)
