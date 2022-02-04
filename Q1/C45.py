@@ -6,6 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 
 dataset = pd.read_csv("Q1/database.csv")
+dataset = dataset.loc[:, dataset.columns != 'Exemplo']
 
 config = {'algorithm' : 'CART'}
 
