@@ -1,26 +1,26 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.tree import plot_tree
-from sklearn.preprocessing import OrdinalEncoder
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
+from sklearn.preprocessing import OneHotEncoder
+from sklearn import tree
+import graphviz
 
-dataset = pd.read_csv('Q1/database.csv')
+dataset = pd.read_csv('database.csv')
 dataset = dataset.loc[:, dataset.columns != 'Exemplo']
-enc = OrdinalEncoder()
-dataset = enc.fit_transform(dataset)
 
-X = dataset[:, :-1]
-print(X[0])
-print(X[1])
-print(X[2])
-print(X[3])
+X = dataset[['História de Credito', 'Dívida', 'Garantia', 'Renda']]
+y = dataset["Risco"]
 
-y = dataset[:, -1]
+enc = OneHotEncoder()
+X_enc = enc.fit_transform(X)
 
 clf = DecisionTreeClassifier(random_state = 0)
-clf = clf.fit(X, y)
+clf = clf.fit(X_enc, y)
 
-plot_tree(clf)
-plt.show()
+dot_data = tree.export_graphviz(clf, feature_names=enc.get_feature_names_out(input_features = X.columns), class_names=clf.classes_)
+
+graph = graphviz.Source(dot_data)
+graph.render("tree_plot")
+graph.view()
 
